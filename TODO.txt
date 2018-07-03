@@ -1,0 +1,35 @@
+Roles : 
+
+|- Admin			-| 
+|- Dean			-|
+|- HOD			-|
+|- Program CoOrdinater	-|
+|- Event CoOrdinater  -|
+|- Faculty	      -|
+|- Student	-|
+
+
+EVENTS
+
+INSERT INTO `events` (`e_id`, `staff_id`, `name`, `description`, `date`, `time`, `poster`, `venue`, `max_participant`, `resource_person`, `department`, `category`, `created_at`, `updated_at`) VALUES (NULL, '123', 'Android Application Development', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis corporis, voluptates unde sed soluta dignissimos ut consectetur, libero provident temporibus ipsam quas tempora distinctio, omnis ab. Magni eius tenetur blanditiis!', '2018-01-31', '08:00:00', NULL, 'CTC Lab 17', '80', 'Evin Roberts', 'CSE', 'Workshop', '2018-01-29 12:00:00', '2018-01-29 12:00:00'), (NULL, '123', 'Web Development ', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis corporis, voluptates unde sed soluta dignissimos ut consectetur, libero provident temporibus ipsam quas tempora distinctio, omnis ab. Magni eius tenetur blanditiis!', '2018-03-03', '08:00:00', NULL, 'CTC Lab 11', '120', 'Jake Ball', 'CSE', 'Workshop', '2018-02-08 12:00:00', '2018-01-29 12:00:00'), (NULL, '123', 'Machine Learning and Data Science in R', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis corporis, voluptates unde sed soluta dignissimos ut consectetur, libero provident temporibus ipsam quas tempora distinctio, omnis ab. Magni eius tenetur blanditiis!', '2018-02-28', '09:30:00', NULL, NULL, '150', 'Dr. Rajkumar Rajasekaran', 'CSE', 'Seminar', '2018-02-18 00:00:00', '2018-02-18 00:00:00') 
+
+
+
+
+
+
+
+
+
+
+STAGE 2 -
+
+Interested In Event : REquest to Event CoOrdinater
+Payment
+Social Media
+Feedback | Event Rating
+
+
+DEPLOY PROCESS - 
+
+DEPLOY -> Add Roles using factory -> 

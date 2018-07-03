@@ -1,0 +1,1 @@
+A {{$event_category}} on {{ $event_name }} is <b> Approved </b> !! To be conducted on {{ $event_date }}
