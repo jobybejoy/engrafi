@@ -1,4 +1,4 @@
-##To install and run the application
+## To install and run the application
 
 To install dependencies
 `composer update`
@@ -11,7 +11,8 @@ Create the OAuth keys
 
 
 
-##Note Demo Login
+## Note Demo Login
+
 Have to create a user with (App accepts only @karunya.edu.in [ *role: Student* ])
 username: jobyvarghesebejoy@karunya.edu.in
 password: joby1234
