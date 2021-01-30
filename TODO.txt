@@ -20,6 +20,13 @@ INSERT INTO `events` (`e_id`, `staff_id`, `name`, `description`, `date`, `time`,
 
 
 
+RUNNING
+
+
+php artisan migrate
+php artisan passport:install
+
+
 
 
 STAGE 2 -

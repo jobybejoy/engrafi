@@ -415,8 +415,12 @@ class EventController extends Controller
         switch ($role){
             case 'Event Coordinator':
             case 'Faculty': 
-                    return Faculty::select('staff_id','role')
-                            ->where([ ['department','=', $department] , ['role','=','Program Coordinator'] ])->first();
+                     $prog_cordinator = Faculty::select('staff_id','role')->where([ ['department','=', $department] , ['role','=','Program Coordinator'] ])->first();
+                            if(!$prog_cordinator){
+                                $HOD = Faculty::select('staff_id','role')->where([ ['department','=', $department] , ['role','=','HOD'] ])->first();
+                            }else{
+                                return $prog_cordinator;
+                            }
                 break;
             case 'Program Coordinator': 
                     return Faculty::select('staff_id','role')
@@ -446,7 +450,7 @@ class EventController extends Controller
             'description'=> 'required',
             'date'  => 'required|date',
             'time'  => 'required',
-            'sessions' => 'required|integer|min:2|max:6',
+            'sessions' => 'required|integer|min:1|max:6',
             'venue'     => 'nullable|string|max:190',
             'card_image' => 'nullable|image',
             'max_participant' => 'integer',

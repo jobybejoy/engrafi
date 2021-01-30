@@ -138,7 +138,8 @@ class ApiAuthController extends Controller
         //Mobile number can be included 
         $validator = Validator::make($request->all(), [
             'name'      => 'required|string|max:190',
-            'email'     => 'required|string|email|max:190|unique:users|regex:/^[A-Za-z0-9\.]*@(karunya)[.](edu)?([.](in))?$/',
+            // 'email'     => 'required|string|email|max:190|unique:users|regex:/^[A-Za-z0-9\.]*@(karunya)[.](edu)?([.](in))?$/',
+            'email'     => 'required|string|email|max:190|unique:users',
             'password'  => 'required|string|min:8|confirmed',
         ]);
 
@@ -207,9 +208,10 @@ class ApiAuthController extends Controller
 
         // return $request->token;
 
-        $user = DB::table('users_activation')->where('token',$request->token)->first();
-
-        if(count($user) > 0){
+        $result = DB::table('users_activation')->where('token',$request->token)->get();
+        
+        if(count($result) > 0){
+            $user = $result[0];
             DB::table('users')->where('email',$user->email)->update(['active' => true,'first_login' => true]);
         
             // Del Acc Activation Token from table
