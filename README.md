@@ -1,13 +1,19 @@
 ## To install and run the application
 
 To install dependencies
-`composer update`
+```
+composer update
+```
 
 To migrate the database ( make sure the correct db credentials in .env)
-`php artisan migrate`
+```
+php artisan migrate
+```
 
 Create the OAuth keys
-`php artisan passport:install`
+```
+php artisan passport:install
+```
 
 
 
